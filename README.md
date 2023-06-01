@@ -161,5 +161,5 @@ Remember to replace the file names and customize the file operations inside the 
 ```
 Replace "YOUR_DISCORD_BOT_TOKEN" with your actual Discord bot token in the line client.run("YOUR_DISCORD_BOT_TOKEN").
 Replace 123456789 with the ID of the channel where you want to send the logs in the line channel_id = 123456789.
-Make sure to install the discord library using pip install discord before running the code
-.```
+Make sure to install the discord library using pip install discord before running the code.
+```
