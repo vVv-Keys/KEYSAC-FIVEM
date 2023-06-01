@@ -54,85 +54,74 @@ Requirements:
 Features:
 ```
 ```
-Client Side Protecet :
-|
-Anti Track Player's
-Anti Health Hack
-Anti Armor Hack
-Anti Infinity Ammo
-Anti Spactate
-Anti Ragdoll
-Anti Menyoo
-Anti Aim Assist
-Anti Infinite Stamina
-Anti Aim Bot
-Anti Spactate
-Anti Black List Weapon
-Anti Add Weapon
-Anti Remove Weapon
-Anti God Mode
-Anti Noclip
-Anti Rainbow Vehicle
-Anti Teleport Vehicle
-Anti Teleport Ped
-Anti Invisble
-Anti Change Speed
-Anti Free Camera
-Anti Plate Changer
-Anti Night Vision
-Anti Thermal Vision
-Anti Super Jump
-Anti Suicide
-|
-Server Side Protecet :
-|
-Anti Spam Chat
-Anti Black List Commands
-Anti Weapon Damage Changer
-Anti Vehicle Damage Changer
-Anti Black List Word
-Anti Bring All
-Anti Black List Trigger
-Anti Spam Trigger
-Anti Clear Ped Tasks
-Anti Taze Players
-Anti Inject
-Anti Black List Explosion
-Anti Explosion Spam
-Anti Black List Object
-Anti Black List Ped
-Anti Black List Vehicle
-Anti Spam Vehicle
-Anti Spam Ped
-Anti Spam Object
-Anti Change Perm
-Anti Play Sound
-|
-Inject Protect :
-Anti Menu
-Anti Resource Start / Stop / Restart
-Anti Add Command
-|
-Connection Protect:
-Anti VPN
-Anti Hosting
-Anti Black List Name
-|
-Banning Method:
-FiveM License
-Steam Identifier
-IP Address
-Microsoft ID(LIVE ID)
-Xbox Live ID (XBL ID)
-Discord ID
-FiveM Player Token's
-|
-Logging System's :
-Console Log
-Discord Log
-Chat Log
-Screenshot Log
+KEYSAC.ServerConfig: Contains information about the server, such as the server name and port number.
+KEYSAC.Log: Defines log file paths for different events such as bans, errors, connections, disconnects, and explosions.
+KEYSAC.PrivateWarn: Specifies whether warnings should be sent privately to the player.
+KEYSAC.ScreenShot: Configures settings for taking screenshots, including enabling or disabling the feature, setting the image format and quality, and specifying a log file path.
+KEYSAC.Connection: Configures connection-related settings, such as enabling anti-blacklist name checks and anti-VPN measures.
+KEYSAC.Message: Defines the messages to be displayed when a player is kicked or banned.
+KEYSAC.AdminMenu: Specifies settings for the admin menu, including enabling or disabling it, setting the activation key, and defining the default punishment.
+KEYSAC.AntiTrackPlayer: Enables or disables anti-track player measures.
+KEYSAC.AntiHealthHack: Enables or disables anti-health hack measures.
+KEYSAC.AntiArmorHack: Enables or disables anti-armor hack measures.
+KEYSAC.AntiBlacklistTasks: Enables or disables anti-blacklisted tasks measures.
+KEYSAC.AntiBlacklistAnims: Enables or disables anti-blacklisted anims measures.
+KEYSAC.SafePlayers: Enables or disables safe player measures.
+KEYSAC.AntiSpectate: Enables or disables anti-spectate measures.
+KEYSAC.AntiBlackListWeapon: Enables or disables anti-blacklisted weapon measures.
+KEYSAC.AntiGodMode: Enables or disables anti-god mode measures.
+KEYSAC.AntiInvisible: Enables or disables anti-invisible measures.
+KEYSAC.AntiChangeSpeed: Enables or disables anti-change speed measures.
+KEYSAC.AntiFreeCam: Enables or disables anti-free cam measures.
+KEYSAC.AntiRainbowVehicle: Enables or disables anti-rainbow vehicle measures.
+KEYSAC.AntiPlateChanger: Enables or disables anti-plate changer measures.
+KEYSAC.AntiNightVision: Enables or disables anti-night vision measures.
+KEYSAC.AntiSuperJump: Enables or disables anti-super jump measures.
+KEYSAC.AntiTeleport: Enables or disables anti-teleport measures.
+KEYSAC.AntiPedChanger: Enables or disables anti-ped changer measures.
+KEYSAC.AntiInfiniteStamina: Enables or disables anti-infinite stamina measures.
+KEYSAC.AntiRagdoll: Enables or disables anti-ragdoll measures.
+KEYSAC.AntiMenyoo: Enables or disables anti-Menyoo measures.
+KEYSAC.AntiAimAssist: Enables or disables anti-aim assist measures.
+KEYSAC.AntiResourceStopper: Enables or disables anti-resource stopper measures.
+KEYSAC.AntiResourceStarter: Enables or disables anti-resource starter measures.
+KEYSAC.AntiResourceRestarter: Enables or disables anti-resource restarter measures.
+KEYSAC.AntiTinyPed: Enables or disables anti-tiny ped measures.
+KEYSAC.AntiRemote: Enables or disables anti-remote measures.
+KEYSAC.AntiInfiniteAmmo: Enables or disables anti-infinite ammo measures.
+KEYSAC.AntiNoClip: Enables or disables anti-no clip measures.
+KEYSAC.AntiVehicleGodMode: Enables or disables anti-vehicle god mode measures.
+KEYSAC.AntiVehicleInvisible: Enables or disables anti-vehicle invisible measures.
+KEYSAC.AntiVehicleFly: Enables or disables anti-vehicle fly measures.
+KEYSAC.AntiVehicleSpeed: Enables or disables anti-vehicle speed hack measures.
+KEYSAC.AntiVehicleBoost: Enables or disables anti-vehicle boost measures.
+KEYSAC.AntiVehicleRainbow: Enables or disables anti-vehicle rainbow measures.
+KEYSAC.AntiVehicleGravity: Enables or disables anti-vehicle gravity measures.
+KEYSAC.AntiVehicleJump: Enables or disables anti-vehicle jump measures.
+KEYSAC.AntiVehicleDriveOnWater: Enables or disables anti-vehicle drive on water measures.
+KEYSAC.AntiVehicleFlyThroughWalls: Enables or disables anti-vehicle fly through walls measures.
+KEYSAC.AntiVehicleNoCollision: Enables or disables anti-vehicle no collision measures.
+KEYSAC.AntiVehicleExplode: Enables or disables anti-vehicle explode measures.
+KEYSAC.AntiVehicleDelete: Enables or disables anti-vehicle delete measures.
+KEYSAC.AntiVehicleRepair: Enables or disables anti-vehicle repair measures.
+KEYSAC.AntiVehicleFlip: Enables or disables anti-vehicle flip measures.
+KEYSAC.AntiVehicleRepairOnSpawn: Enables or disables anti-vehicle repair on spawn measures.
+KEYSAC.AntiVehicleEngineAlwaysOn: Enables or disables anti-vehicle engine always on measures.
+KEYSAC.AntiVehicleWheelPopping: Enables or disables anti-vehicle wheel popping measures.
+KEYSAC.AntiVehicleRapidFire: Enables or disables anti-vehicle rapid fire measures.
+KEYSAC.AntiVehicleSpeedMultiplier: Enables or disables anti-vehicle speed multiplier measures.
+KEYSAC.AntiVehicleAccelerationMultiplier: Enables or disables anti-vehicle acceleration multiplier measures.
+KEYSAC.AntiVehicleMaxSpeedMultiplier: Enables or disables anti-vehicle max speed multiplier measures.
+KEYSAC.AntiVehicleMassMultiplier: Enables or disables anti-vehicle mass multiplier measures.
+KEYSAC.AntiVehicleHandlingModifier: Enables or disables anti-vehicle handling modifier measures.
+KEYSAC.AntiVehicleGravityModifier: Enables or disables anti-vehicle gravity modifier measures.
+KEYSAC.AntiVehicleHealthModifier: Enables or disables anti-vehicle health modifier measures.
+KEYSAC.AntiVehicleDamageModifier: Enables or disables anti-vehicle damage modifier measures.
+KEYSAC.AntiVehicleCollisionModifier: Enables or disables anti-vehicle collision modifier measures.
+
++ MANY OTHERS AND UNIQUE BANNING METHODS.
 ```
+
 ### LOGS
 
 ```
