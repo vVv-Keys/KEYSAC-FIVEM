@@ -20,6 +20,7 @@ KEYSAC_Log_Error = "error.log"
 KEYSAC_Log_Connect = "connect.log"
 KEYSAC_Log_Disconnect = "disconnect.log"
 KEYSAC_Log_Explosion = "explosion.log"
+KEYSAC_Log_Audit = "audit.log"  # New audit log file
 
 # Define loggers
 ban_logger = logging.getLogger("ban_logger")
@@ -47,6 +48,11 @@ explosion_logger.setLevel(logging.INFO)
 explosion_handler = logging.FileHandler(KEYSAC_Log_Explosion)
 explosion_logger.addHandler(explosion_handler)
 
+audit_logger = logging.getLogger("audit_logger")  # New audit logger
+audit_logger.setLevel(logging.INFO)  # Set log level as desired
+audit_handler = logging.FileHandler(KEYSAC_Log_Audit)
+audit_logger.addHandler(audit_handler)
+
 # Initialize the KEYSACLogs instance
 logs = KEYSACLogs()
 
@@ -67,26 +73,36 @@ class DiscordHandler(logging.Handler):
 def on_ban(player):
     ban_logger.info(f"Player {player} was banned.")
     logs.log_event("Ban", f"Player {player} was banned.")
+    audit_logger.info(f"Ban event - Player: {player}")
+
     # Add additional actions like notifying other players or taking further steps
 
 def on_error(error_message):
     error_logger.error(error_message)
     logs.log_event("Error", error_message)
+    audit_logger.error(f"Error event - Message: {error_message}")
+
     # Add additional error handling logic
 
 def on_connect(player):
     connect_logger.info(f"Player {player} connected.")
     logs.log_event("Connect", f"Player {player} connected.")
+    audit_logger.info(f"Connect event - Player: {player}")
+
     # Add additional actions like verifying player credentials or checking for banned players
 
 def on_disconnect(player):
     disconnect_logger.info(f"Player {player} disconnected.")
     logs.log_event("Disconnect", f"Player {player} disconnected.")
+    audit_logger.info(f"Disconnect event - Player: {player}")
+
     # Add additional actions like updating player statistics or saving game progress
 
 def on_explosion(player):
     explosion_logger.info(f"Player {player} caused an explosion.")
     logs.log_event("Explosion", f"Player {player} caused an explosion.")
+    audit_logger.info(f"Explosion event - Player: {player}")
+
     # Add additional actions like penalizing the player or initiating an investigation
 
 # Example usage
@@ -120,10 +136,13 @@ def main():
         if message.content == "!logs":
             with open(KEYSAC_Log_Error, "r") as f:
                 await message.channel.send(f"Error Log:\n```{f.read()}```")
+            with open(KEYSAC_Log_Audit, "r") as f:  # Send audit log contents
+                await message.channel.send(f"Audit Log:\n```{f.read()}```")
 
     client.run("YOUR_DISCORD_BOT_TOKEN")  # Replace with your Discord bot token
 
 if __name__ == "__main__":
     main()
+
 
 
