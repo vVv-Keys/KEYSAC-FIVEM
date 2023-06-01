@@ -155,6 +155,6 @@ Make sure to install the discord library using pip install discord before runnin
 
 ### UPDATES:
 
-> Updated exception handling format to try-except blocks to implement more robust error handling for the ANTICHEAT. 
-
+> Updated exception handling format to try-except blocks to implement MORE ROBUST ERROR handling for the ANTICHEAT. 
+> ADDED DISCORD INTEGRATION/AUDIT LOG INTEGRATIONS
 
