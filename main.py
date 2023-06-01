@@ -96,6 +96,11 @@ def main():
         if message.content == "!logs":
             with open(KEYSAC_Log_Error, "r") as f:
                 await message.channel.send(f"Error Log:\n```{f.read()}```")
+            all_events = logs.get_all_events()
+            audit_log = "Audit Log:\n"
+            for event in all_events:
+                audit_log += f"Type: {event['type']}, Message: {event['message']}\n"
+            await message.channel.send(audit_log)
 
     client.run("YOUR_DISCORD_BOT_TOKEN")  # Replace with your Discord bot token
 
