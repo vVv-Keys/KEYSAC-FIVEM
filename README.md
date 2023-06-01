@@ -152,3 +152,9 @@ Replace "YOUR_DISCORD_BOT_TOKEN" with your actual Discord bot token in the line 
 Replace 123456789 with the ID of the channel where you want to send the logs in the line channel_id = 123456789.
 Make sure to install the discord library using pip install discord before running the code.
 ```
+
+### UPDATES:
+
+> Updated exception handling format to try-except blocks to implement more robust error handling for the ANTICHEAT. 
+
+
