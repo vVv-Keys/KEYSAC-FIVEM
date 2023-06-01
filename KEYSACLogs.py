@@ -2,6 +2,7 @@ import logging
 import discord
 import asyncio
 
+# Define KEYSACLogs class
 class KEYSACLogs:
     def __init__(self):
         self.events = []
