@@ -39,3 +39,97 @@ Here's a breakdown of the different sections and options in the script:
 
 Other sections: Each section corresponds to a specific type of protection measure, such as anti-spectate, anti-invisible, anti-plate changer, etc.
 Overall, this script defines a comprehensive set of configurations for a server protection system with various safeguards against cheating or exploiting in FiveM and can be updated and implemented to your server to fit your configurations or standards - enjoy.
+
+
+### STANDARD FEATURES:
+
+```
+Requirements:
+```
+menuv
+discord-screenshot
+|
+
+```
+Features:
+```
+```
+Client Side Protecet :
+|
+Anti Track Player's
+Anti Health Hack
+Anti Armor Hack
+Anti Infinity Ammo
+Anti Spactate
+Anti Ragdoll
+Anti Menyoo
+Anti Aim Assist
+Anti Infinite Stamina
+Anti Aim Bot
+Anti Spactate
+Anti Black List Weapon
+Anti Add Weapon
+Anti Remove Weapon
+Anti God Mode
+Anti Noclip
+Anti Rainbow Vehicle
+Anti Teleport Vehicle
+Anti Teleport Ped
+Anti Invisble
+Anti Change Speed
+Anti Free Camera
+Anti Plate Changer
+Anti Night Vision
+Anti Thermal Vision
+Anti Super Jump
+Anti Suicide
+|
+Server Side Protecet :
+|
+Anti Spam Chat
+Anti Black List Commands
+Anti Weapon Damage Changer
+Anti Vehicle Damage Changer
+Anti Black List Word
+Anti Bring All
+Anti Black List Trigger
+Anti Spam Trigger
+Anti Clear Ped Tasks
+Anti Taze Players
+Anti Inject
+Anti Black List Explosion
+Anti Explosion Spam
+Anti Black List Object
+Anti Black List Ped
+Anti Black List Vehicle
+Anti Spam Vehicle
+Anti Spam Ped
+Anti Spam Object
+Anti Change Perm
+Anti Play Sound
+|
+Inject Protect :
+Anti Menu
+Anti Resource Start / Stop / Restart
+Anti Add Command
+|
+Connection Protect:
+Anti VPN
+Anti Hosting
+Anti Black List Name
+|
+Banning Method:
+FiveM License
+Steam Identifier
+IP Address
+Microsoft ID(LIVE ID)
+Xbox Live ID (XBL ID)
+Discord ID
+FiveM Player Token's
+|
+Logging System's :
+Console Log
+Discord Log
+Chat Log
+Screenshot Log
+```
