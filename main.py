@@ -1,5 +1,5 @@
 import logging
-from logs_module import KEYSACLogs
+import discord
 
 # Define log files
 KEYSAC_Log_Ban = "ban.log"
@@ -36,6 +36,19 @@ explosion_logger.addHandler(explosion_handler)
 
 # Initialize the KEYSACLogs instance
 logs = KEYSACLogs()
+
+# Define Discord logging handler
+class DiscordHandler(logging.Handler):
+    def __init__(self, client, channel_id):
+        super().__init__()
+        self.client = client
+        self.channel_id = channel_id
+
+    def emit(self, record):
+        log_entry = self.format(record)
+        channel = self.client.get_channel(self.channel_id)
+        if channel:
+            asyncio.create_task(channel.send(log_entry))
 
 # Define event handlers and actions
 def on_ban(player):
@@ -74,6 +87,28 @@ def main():
     on_connect(player)
     on_disconnect(player)
     on_explosion(player)
+
+    # Configure Discord logging handler
+    client = discord.Client()
+    channel_id = 123456789  # Replace with your Discord channel ID
+    discord_handler = DiscordHandler(client, channel_id)
+    discord_handler.setLevel(logging.INFO)
+    formatter = logging.Formatter("%(levelname)s: %(message)s")
+    discord_handler.setFormatter(formatter)
+    logging.getLogger().addHandler(discord_handler)
+
+    # Discord bot event handlers
+    @client.event
+    async def on_ready():
+        print(f"Logged in as {client.user.name}")
+
+    @client.event
+    async def on_message(message):
+        if message.content == "!logs":
+            with open(KEYSAC_Log_Error, "r") as f:
+                await message.channel.send(f"Error Log:\n```{f.read()}```")
+
+    client.run("YOUR_DISCORD_BOT_TOKEN")  # Replace with your Discord bot token
 
 if __name__ == "__main__":
     main()
