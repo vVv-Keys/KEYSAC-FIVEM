@@ -46,8 +46,8 @@ Overall, this script defines a comprehensive set of configurations for a server 
 ```
 Requirements:
 ```
-menuv
-discord-screenshot
+## menuv 
+## discord-screenshot
 |
 
 ```
