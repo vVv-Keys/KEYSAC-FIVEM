@@ -158,3 +158,4 @@ Make sure to install the discord library using pip install discord before runnin
 > Updated exception handling format to try-except blocks to implement MORE ROBUST ERROR handling for the ANTICHEAT. 
 > ADDED DISCORD INTEGRATION/AUDIT LOG INTEGRATIONS
 
+> Note: This is an ongoing-open source development feel free to updated as needed to fit your server preferences, the code provided above assumes you are using the FiveM based framework with all the proper dependencies evolved as a base and have the necessary knowledge and understanding of Lua, Python, and FiveM development to implement the AntiCheat features effectively. I will keep updating this eventually as time goes on to be more effecient and protective yet easy to use with FIVEM.
