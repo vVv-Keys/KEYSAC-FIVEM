@@ -133,3 +133,24 @@ Discord Log
 Chat Log
 Screenshot Log
 ```
+### LOGS
+
+```
+Based on the code snippet I provided, here are a few other aspects you may need to consider:
+
+Log Levels: The code I shared sets the log level to INFO. However, you may want to adjust the log level based on your requirements. 
+The available log levels in increasing order of severity are DEBUG, INFO, WARNING, ERROR, and CRITICAL. You can set the desired log level by modifying the line logging.basicConfig(level=logging.INFO).
+
+Log Formatting: The code uses a basic log formatting, which includes the log level, timestamp, and message. If you want to customize the log format further, you can modify the logging.basicConfig call by specifying a different format parameter. You can refer to the Python documentation for the logging module to explore various formatting options.
+
+File Handler: The code provided only logs the messages to the console. If you want to log the messages to a file, you can add a FileHandler to the logger. This will allow you to store the logs in a file for future reference. Here's an example of how you can add a file handler:
+```
+```python 
+file_handler = logging.FileHandler('log_file.txt')
+file_handler.setLevel(logging.INFO)
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
+```
+> Exception Handling: This code includes the calculate_sum, read_file, and write_file functions, along with the exception handling for each operation. It also demonstrates example usages of the functions and logs the results using the logger.
+Remember to replace the file names and customize the file operations inside the functions according to your specific requirements.
+
