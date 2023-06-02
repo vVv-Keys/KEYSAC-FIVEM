@@ -127,4 +127,15 @@ Replace 123456789 with the ID of the channel where you want to send the logs in 
 
 > - ADDED DISCORD INTEGRATION/AUDIT LOG INTEGRATIONS
 
+### WORK IN PROGRESS:
+
+> - mplement Player Behavior Analysis: Instead of solely relying on detecting specific cheat behaviors or actions, I will develop a function that will analyze player behavior patterns over time. 
+This can involve tracking player statistics, monitoring player movement and interactions, and detecting anomalies or suspicious patterns. 
+By analyzing player behavior, you can identify potential cheaters even if they are using less obvious or undetectable cheats.
+
+> - Server-Side Checks: Perform validation and verification of critical actions and data on the server-side. 
+For example, when a player performs an action, validate it on the server to ensure it's legitimate and within the allowed parameters.
+
+> - Encryption and Code Obfuscation - after I have developed this to suit my needs the open source will no longer be available and there will only be a config.lua available for modification so please enjoy this or use it while it last. I will be confuring my obfuscation for a certain area to protect special parts of codes/handlers I have created that run specific functions to provide extra security and maintenance.
+
 > Note: This is an ongoing-open source development feel free to update and contribute as needed to uodate or fork TO fit your server preferences, the code provided above assumes you are using the FiveM based framework with all the proper dependencies evolved as a base and have the necessary knowledge and understanding of Lua, Python, and FiveM development to implement the AntiCheat features effectively. I will keep updating this eventually as time goes on to be more effecient and protective yet easy to use with FIVEM.
