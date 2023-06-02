@@ -130,6 +130,8 @@ Replace 123456789 with the ID of the channel where you want to send the logs in 
 > - Server-Side Checks: Perform validation and verification of critical actions and data on the server-side. 
 For example, when a player performs an action, validate it on the server to ensure it's legitimate and within the allowed parameters.
 
+> - Cleaned up syntax/coding
+
 ### WORK IN PROGRESS:
 
 > - Implement Player Behavior Analysis: Instead of solely relying on detecting specific cheat behaviors or actions, I will develop a function that will analyze player behavior patterns over time. 
@@ -139,6 +141,9 @@ By analyzing player behavior, you can identify potential cheaters even if they a
 > - IMPLEMENT MACHINE LEARNING + DATA PROCESSING:  train a machine learning model using labeled data to classify cheating behaviors and then use the model to detect similar patterns in real-time gameplay. 
 
 > - Encryption and Code Obfuscation - after I have developed this to suit my needs with PBA and Machine Learning - the open source will no longer be available and there will only be a config.lua available for modification. 
-Please enjoy this or use it while it last. I will be confuring my obfuscation for a certain area to protect special parts of codes/handlers I have created that run specific functions to provide extra security and maintenance.
+Please enjoy this or use it while it last. I will be confuring my obfuscation for a certain area to protect special parts of aalgorithims/codes/and unique handlers I have created that run specific functions to provide extra security and maintenance.
 
+> - KEEP ADDING+UPDATING ADDITIONAL CHECK FUNCTIONS
+
+> - 
 > Note: This is an ongoing-open source development feel free to update and contribute as needed to uodate or fork TO fit your server preferences, the code provided above assumes you are using the FiveM based framework with all the proper dependencies evolved as a base and have the necessary knowledge and understanding of Lua, Python, and FiveM development to implement the AntiCheat features effectively. I will keep updating this eventually as time goes on to be more effecient and protective yet easy to use with FIVEM.
