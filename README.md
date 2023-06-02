@@ -3,7 +3,7 @@ FIVEM ANTICHEAT
 
 ![image](https://github.com/Ceilo/KEYSAC/assets/49612041/2454c60a-2803-4126-b5ee-594998fca473)
 
-### keys anticheaT
+### keys anticheaT - please use the config.lua file instead of ``keys-config.lua`` (<-- this is an example for people with less understanding to know where things are)
 
 Here's a breakdown of the different sections and options in the script:
 
