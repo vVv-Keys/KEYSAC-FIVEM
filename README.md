@@ -127,14 +127,14 @@ Replace 123456789 with the ID of the channel where you want to send the logs in 
 
 > - ADDED DISCORD INTEGRATION/AUDIT LOG INTEGRATIONS
 
+> - Server-Side Checks: Perform validation and verification of critical actions and data on the server-side. 
+For example, when a player performs an action, validate it on the server to ensure it's legitimate and within the allowed parameters.
+
 ### WORK IN PROGRESS:
 
 > - Implement Player Behavior Analysis: Instead of solely relying on detecting specific cheat behaviors or actions, I will develop a function that will analyze player behavior patterns over time. 
 This can involve tracking player statistics, monitoring player movement and interactions, and detecting anomalies or suspicious patterns. 
 By analyzing player behavior, you can identify potential cheaters even if they are using less obvious or undetectable cheats.
-
-> - Server-Side Checks: Perform validation and verification of critical actions and data on the server-side. 
-For example, when a player performs an action, validate it on the server to ensure it's legitimate and within the allowed parameters.
 
 > - Encryption and Code Obfuscation - after I have developed this to suit my needs the open source will no longer be available and there will only be a config.lua available for modification so please enjoy this or use it while it last. I will be confuring my obfuscation for a certain area to protect special parts of codes/handlers I have created that run specific functions to provide extra security and maintenance.
 
