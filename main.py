@@ -1,6 +1,5 @@
 import logging
 import discord
-import asyncio
 from logs_module import KEYSACLogs
 
 # Define log files
@@ -35,6 +34,9 @@ explosion_logger = logging.getLogger("explosion_logger")
 explosion_logger.setLevel(logging.INFO)
 explosion_handler = logging.FileHandler(KEYSAC_Log_Explosion)
 explosion_logger.addHandler(explosion_handler)
+
+# Initialize the KEYSACLogs instance
+logs = KEYSACLogs()
 
 # Define event handlers and actions
 def on_ban(player):
@@ -90,19 +92,6 @@ def on_explosion(player):
 # Example usage
 def main():
     try:
-        # Assuming these events are triggered somewhere in your code
-        player = "JohnDoe"
-        error_message = "An error occurred."
-
-        on_ban(player)
-        on_error(error_message)
-        on_connect(player)
-        on_disconnect(player)
-        on_explosion(player)
-
-        # Initialize the KEYSACLogs instance
-        logs = KEYSACLogs()
-
         # Configure Discord logging handler
         client = discord.Client()
         channel_id = 123456789  # Replace with your Discord channel ID
@@ -136,3 +125,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
