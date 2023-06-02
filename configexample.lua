@@ -5,6 +5,7 @@
 --------[------ Dev By Desperado -----]--------
 --------[-----------------------------------]--------
 
+-- THIS IS THE ORIGINAL FILE - TO GIVE EXAMPLES OF LAYOUTS SETUP ETC - PLEASE USE THE CONFIG.LUA FOLDER for the updated CONFIG.LUA --
 
 
 KEYSAC = {}
