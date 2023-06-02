@@ -141,7 +141,7 @@ By analyzing player behavior, you can identify potential cheaters even if they a
 > - IMPLEMENT MACHINE LEARNING + DATA PROCESSING:  train a machine learning model using labeled data to classify cheating behaviors and then use the model to detect similar patterns in real-time gameplay. 
 
 > - Encryption and Code Obfuscation - after I have developed this to suit my needs with PBA and Machine Learning - the open source will no longer be available and there will only be a config.lua available for modification. 
-Please enjoy this or use it while it last. I will be confuring my obfuscation for a certain area to protect special parts of aalgorithims/codes/and unique handlers I have created that run specific functions to provide extra security and maintenance.
+Please enjoy this or use it while it last. I will be configuring my obfuscation near the end of this project for a certain areas to protect special parts of algorithims/codes/and unique handlers I have created that run specific functions to provide extra security and maintenance.
 
 > - KEEP ADDING+UPDATING ADDITIONAL CHECK FUNCTIONS
 
