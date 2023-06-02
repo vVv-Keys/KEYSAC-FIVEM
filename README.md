@@ -129,7 +129,7 @@ Replace 123456789 with the ID of the channel where you want to send the logs in 
 
 ### WORK IN PROGRESS:
 
-> - mplement Player Behavior Analysis: Instead of solely relying on detecting specific cheat behaviors or actions, I will develop a function that will analyze player behavior patterns over time. 
+> - Implement Player Behavior Analysis: Instead of solely relying on detecting specific cheat behaviors or actions, I will develop a function that will analyze player behavior patterns over time. 
 This can involve tracking player statistics, monitoring player movement and interactions, and detecting anomalies or suspicious patterns. 
 By analyzing player behavior, you can identify potential cheaters even if they are using less obvious or undetectable cheats.
 
