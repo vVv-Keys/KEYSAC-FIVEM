@@ -2,7 +2,7 @@ import logging
 import discord
 import asyncio
 
-
+# Define KEYSACLogs class
 class KEYSACLogs:
     def __init__(self):
         self.events = []
@@ -14,13 +14,14 @@ class KEYSACLogs:
     def get_all_events(self):
         return self.events
 
+# Define log files and loggers
 
 KEYSAC_Log_Ban = "ban.log"
 KEYSAC_Log_Error = "error.log"
 KEYSAC_Log_Connect = "connect.log"
 KEYSAC_Log_Disconnect = "disconnect.log"
 KEYSAC_Log_Explosion = "explosion.log"
-KEYSAC_Log_Audit = "audit.log"
+KEYSAC_Log_Audit = "audit.log"  # New audit log file
 
 ban_logger = logging.getLogger("ban_logger")
 ban_logger.setLevel(logging.INFO)
@@ -47,12 +48,15 @@ explosion_logger.setLevel(logging.INFO)
 explosion_handler = logging.FileHandler(KEYSAC_Log_Explosion)
 explosion_logger.addHandler(explosion_handler)
 
-audit_logger = logging.getLogger("audit_logger")
-audit_logger.setLevel(logging.INFO)
+audit_logger = logging.getLogger("audit_logger")  # New audit logger
+audit_logger.setLevel(logging.INFO)  # Set log level as desired
 audit_handler = logging.FileHandler(KEYSAC_Log_Audit)
 audit_logger.addHandler(audit_handler)
 
+# Initialize the KEYSACLogs instance
+logs = KEYSACLogs()
 
+# Define Discord logging handler
 class DiscordHandler(logging.Handler):
     def __init__(self, client, channel_id):
         super().__init__()
@@ -65,79 +69,97 @@ class DiscordHandler(logging.Handler):
         if channel:
             asyncio.create_task(channel.send(log_entry))
 
+# Define server-side checks
+def is_valid_ban(player):
+    # Add your custom ban validation logic here
+    return True  # Replace with your validation criteria
+
+def is_valid_connect(player):
+    # Add your custom connect validation logic here
+    return True  # Replace with your validation criteria
+
+def is_valid_disconnect(player):
+    # Add your custom disconnect validation logic here
+    return True  # Replace with your validation criteria
+
+def is_valid_explosion(player):
+    # Add your custom explosion validation logic here
+    return True  # Replace with your validation criteria
+
+# Define event handlers and actions
 
 def on_ban(player):
     try:
-        ban_logger.info(f"Player {player} was banned.")
-        logs.log_event("Ban", f"Player {player} was banned.")
-        audit_logger.info(f"Ban event - Player: {player}")
+        if is_valid_ban(player):
+            ban_logger.info(f"Player {player} was banned.")
+            logs.log_event("Ban", f"Player {player} was banned.")
+            audit_logger.info(f"Ban event - Player: {player}")
 
-        # Add additional actions like notifying other players or taking further steps
+            # Add additional actions like notifying other players or taking further steps
+        else:
+            error_message = f"Invalid ban request for player {player}."
+            error_logger.error(error_message)
+            logs.log_event("Error", error_message)
+            raise Exception("Invalid ban request.")
     except Exception as e:
-        error_message = f"An error occurred while handling 'on_ban': {str(e)}"
-        error_logger.error(error_message)
-        logs.log_event("Error", error_message)
-
-
-def on_error(error_message):
-    try:
-        error_logger.error(error_message)
-        logs.log_event("Error", error_message)
-        audit_logger.error(f"Error event - Message: {error_message}")
-
-        # Add additional error handling logic
-    except Exception as e:
-        error_message = f"An error occurred while handling 'on_error': {str(e)}"
-        error_logger.error(error_message)
-        logs.log_event("Error", error_message)
-
+        error_logger.error(f"An error occurred while handling 'on_ban': {str(e)}")
 
 def on_connect(player):
     try:
-        connect_logger.info(f"Player {player} connected.")
-        logs.log_event("Connect", f"Player {player} connected.")
-        audit_logger.info(f"Connect event - Player: {player}")
+        if is_valid_connect(player):
+            connect_logger.info(f"Player {player} connected.")
+            logs.log_event("Connect", f"Player {player} connected.")
+            audit_logger.info(f"Connect event - Player: {player}")
 
-        # Add additional actions like verifying player credentials or checking for banned players
+            # Add additional actions
+        else:
+            error_message = f"Invalid connect request for player {player}."
+            error_logger.error(error_message)
+            logs.log_event("Error", error_message)
+            raise Exception("Invalid connect request.")
     except Exception as e:
-        error_message = f"An error occurred while handling 'on_connect': {str(e)}"
-        error_logger.error(error_message)
-        logs.log_event("Error", error_message)
-
+        error_logger.error(f"An error occurred while handling 'on_connect': {str(e)}")
 
 def on_disconnect(player):
     try:
-        disconnect_logger.info(f"Player {player} disconnected.")
-        logs.log_event("Disconnect", f"Player {player} disconnected.")
-        audit_logger.info(f"Disconnect event - Player: {player}")
+        if is_valid_disconnect(player):
+            disconnect_logger.info(f"Player {player} disconnected.")
+            logs.log_event("Disconnect", f"Player {player} disconnected.")
+            audit_logger.info(f"Disconnect event - Player: {player}")
 
-        # Add additional actions like updating player statistics or saving game progress
+            # Add additional actions
+        else:
+            error_message = f"Invalid disconnect request for player {player}."
+            error_logger.error(error_message)
+            logs.log_event("Error", error_message)
+            raise Exception("Invalid disconnect request.")
     except Exception as e:
-        error_message = f"An error occurred while handling 'on_disconnect': {str(e)}"
-        error_logger.error(error_message)
-        logs.log_event("Error", error_message)
-
+        error_logger.error(f"An error occurred while handling 'on_disconnect': {str(e)}")
 
 def on_explosion(player):
     try:
-        explosion_logger.info(f"Player {player} caused an explosion.")
-        logs.log_event("Explosion", f"Player {player} caused an explosion.")
-        audit_logger.info(f"Explosion event - Player: {player}")
+        if is_valid_explosion(player):
+            explosion_logger.info(f"Explosion caused by player {player}.")
+            logs.log_event("Explosion", f"Explosion caused by player {player}.")
+            audit_logger.info(f"Explosion event - Player: {player}")
 
-        # Add additional actions like penalizing the player or initiating an investigation
+            # Add additional actions
+        else:
+            error_message = f"Invalid explosion request for player {player}."
+            error_logger.error(error_message)
+            logs.log_event("Error", error_message)
+            raise Exception("Invalid explosion request.")
     except Exception as e:
-        error_message = f"An error occurred while handling 'on_explosion': {str(e)}"
-        error_logger.error(error_message)
-        logs.log_event("Error", error_message)
+        error_logger.error(f"An error occurred while handling 'on_explosion': {str(e)}")
 
-
+# Example usage
 def main():
+    # Assuming these events are triggered somewhere in your code
     player = "JohnDoe"
     error_message = "An error occurred."
 
     try:
         on_ban(player)
-        on_error(error_message)
         on_connect(player)
         on_disconnect(player)
         on_explosion(player)
@@ -146,6 +168,7 @@ def main():
         error_logger.error(error_message)
         logs.log_event("Error", error_message)
 
+    # Configure Discord logging handler
     client = discord.Client()
     channel_id = 123456789  # Replace with your Discord channel ID
     discord_handler = DiscordHandler(client, channel_id)
@@ -154,28 +177,16 @@ def main():
     discord_handler.setFormatter(formatter)
     logging.getLogger().addHandler(discord_handler)
 
-    @client.event
-    async def on_ready():
-        print(f"Logged in as {client.user.name}")
+    # Discord bot event handlers
 
-    @client.event
-    async def on_message(message):
-        try:
-            if message.content == "!logs":
-                with open(KEYSAC_Log_Error, "r") as f:
-                    await message.channel.send(f"Error Log:\n```{f.read()}```")
-                all_events = logs.get_all_events()
-                audit_log = "Audit Log:\n"
-                for event in all_events:
-                    audit_log += f"Type: {event['type']}, Message: {event['message']}\n"
-                await message.channel.send(audit_log)
-        except Exception as e:
-            error_message = f"An error occurred in 'on_message' event handler: {str(e)}"
-            error_logger.error(error_message)
-            logs.log_event("Error", error_message)
+    # ...
 
-    client.run("YOUR_DISCORD_BOT_TOKEN")  # Replace with your Discord bot token
-
+    try:
+        client.run("YOUR_DISCORD_BOT_TOKEN")  # Replace with your Discord bot token
+    except Exception as e:
+        error_message = f"An error occurred while running the Discord bot: {str(e)}"
+        error_logger.error(error_message)
+        logs.log_event("Error", error_message)
 
 if __name__ == "__main__":
     main()
