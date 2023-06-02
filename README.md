@@ -124,7 +124,7 @@ Replace 123456789 with the ID of the channel where you want to send the logs in 
 ### UPDATES:
 
 > - Updated exception handling format to try-except blocks to implement MORE ROBUST ERROR handling for the ANTICHEAT.
-| 
+
 > - ADDED DISCORD INTEGRATION/AUDIT LOG INTEGRATIONS
 
-> Note: This is an ongoing-open source development feel free to updated as needed to fit your server preferences, the code provided above assumes you are using the FiveM based framework with all the proper dependencies evolved as a base and have the necessary knowledge and understanding of Lua, Python, and FiveM development to implement the AntiCheat features effectively. I will keep updating this eventually as time goes on to be more effecient and protective yet easy to use with FIVEM.
+> Note: This is an ongoing-open source development feel free to update and contribute as needed to uodate or fork TO fit your server preferences, the code provided above assumes you are using the FiveM based framework with all the proper dependencies evolved as a base and have the necessary knowledge and understanding of Lua, Python, and FiveM development to implement the AntiCheat features effectively. I will keep updating this eventually as time goes on to be more effecient and protective yet easy to use with FIVEM.
