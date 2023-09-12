@@ -152,3 +152,6 @@ Please enjoy this or use it while it last. I will be configuring my obfuscation 
 > - This is an ongoing-open source development made by @KEYS. Feel free to update and contribute as needed to update or FORK TO fit your server preferences.
 
 > - NOTE: the code provided above assumes you are using the FiveM based framework with all the proper dependencies evolved as a base and have the necessary knowledge and understanding of Lua, Python, and FiveM development to implement the AntiCheat features effectively. I will keep updating this eventually as time goes on to be more effecient and protective yet easy to use with FIVEM.
+
+
+### AI DETECTION/AI MODERATION COMING SOON. ARCH DETECTION/x64/x32 + FILES COMING SOON! 
