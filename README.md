@@ -155,3 +155,18 @@ Please enjoy this or use it while it last. I will be configuring my obfuscation 
 
 
 ### AI DETECTION/AI MODERATION COMING SOON. ARCH DETECTION/x64/x32 + FILES COMING SOON! 
+
+-- KEYS AC HAS NOT BEEN UPDATED IN AROUND 2 YEARS. IT WILL STILL PROVIDE BASIC ANTTICHEAT PROTECTION WITHIN FIVEM SERVER ENVIRONMENTS BUT WILL NOT STOP MORE MODERN SIGNATURES OF EULEN/REDENGINE/AND ANY TROLL MENUS (DOS OF CROWN)
+
+with a bit of updates and a few pushes. This script will be working better than it did the first time!
+---------
+
+
+
+# UPDATE # UPDATE # UPDATE
+
+
+If anyone is interested in building different ANTICHEATS FIVEM SPECIFIC please feel free to reach out to me. I  would really love to take this concept and ACTUALLY build out a great ANTICHEAT for FIVEM using real time detection systemss/sepcial logging/error logging etc. TOO MUCH TO TYPE. 
+
+
+DISCORD __Keys
