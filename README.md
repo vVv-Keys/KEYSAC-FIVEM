@@ -5,6 +5,14 @@ FIVEM ANTICHEAT (AI DETECTION/INTEGRATION/ARCHITECTURE DETECTION x64/x32/ ASSEMB
 
 ### keys anticheaT - please use the config.lua file instead of ``keys-config.lua`` (<-- this is an example for people with less understanding to know where things are)
 
+# DISCLAIMER - THIS PROJECT HAS BEEN DISCONTINUED
+
+# DISCLAIMER - THIS ANTICHEAT WORKS BUT NEEDS TO BE CONFIGURED WITH YOUR CITY ETC. THIS PROJECT IS NO LONGER WORKED ON AND IS POINTLESS BECAUSE YOU WILL NEVER BE ABLE TO STOP FIVEM CHEATERS TO ANY EXTENT AND ONCE SOME OF THEM GET A REAL BRAIN OF WHAT THEY
+CAN DO BESIDES USING EXECUTORS AND DUMPS - WE ARE ALL DOOMED! GOOD LUCK MY FRIENDS :D
+
+## if you would like to contribute or work on a project involving FIVEM anticheat feel free to reach out. 
+
+
 Here's a breakdown of the different sections and options in the script:
 
 ### STANDARD FEATURES:
